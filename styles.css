@@ -1,0 +1,140 @@
+/* IceLabs Webpage Styles */
+
+:root {
+    /* Color Palette - Joyful Lab Aesthetic */
+    --primary-blue: #00d2ff;
+    --primary-pink: #ff007a;
+    --accent-purple: #9d50bb;
+    --lab-bg: #f0f9ff;
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --card-bg: #ffffff;
+    --footer-bg: #1a1a1a;
+    
+    /* Spacing & Transitions */
+    --base-padding: 1.5rem;
+    --transition-speed: 0.3s ease;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--lab-bg);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-speed);
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--text-light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--primary-pink);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-pink);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 0 var(--base-padding);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background: var(--primary-pink);
+    color: var(--text-light);
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(255, 0, 122, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: #e6006e;
+}
+
+/* Flavors Grid */
+.flavors-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+.flavors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem
